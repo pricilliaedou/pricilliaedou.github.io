@@ -1,0 +1,56 @@
+main {
+  margin-top: 12vh;
+  min-height: 68vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Formulaire */
+
+.form-contact .form-group {
+  margin-bottom: 15px;
+}
+
+.form-contact label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: var(--fourth-color);
+}
+
+.form-contact input,
+.form-contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--second-color);
+  border-radius: 4px;
+  background-color: var(first-color);
+  color: var(--fourth-color);
+}
+
+.form-contact input:focus,
+.form-contact textarea:focus {
+  outline: none;
+  border-color: var(--third-color);
+}
+
+.form-contact .btn {
+  background-color: var(--third-color);
+  padding: 12px 24px;
+  color: var(--first-color);
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid var(--third-color);
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+}
+
+.form-contact .btn:hover {
+  background-color: var(--fourth-color);
+  color: var(--first-color);
+}
+
+/* Animation enveloppe */

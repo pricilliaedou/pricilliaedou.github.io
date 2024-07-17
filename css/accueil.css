@@ -32,6 +32,9 @@ main {
 /* Responsive */
 @media screen and (max-width: 767px) {
   /* GENERAL */
+  html {
+    font-size: 5px;
+  }
 
   main {
     flex-direction: column;
