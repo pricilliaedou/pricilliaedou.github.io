@@ -1,0 +1,44 @@
+/* main */
+main {
+  display: flex;
+  height: auto;
+  align-items: center;
+  margin-top: 12vh;
+  min-height: 80vh;
+}
+.image,
+.text {
+  max-width: 50%;
+}
+
+.image img {
+  max-width: 100%;
+}
+.text {
+  padding: 20px;
+}
+.links {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.links a {
+  background-color: var(--third-color);
+  border: 1px solid var(--third-color);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 767px) {
+  /* GENERAL */
+
+  main {
+    flex-direction: column;
+    margin-top: 20vh;
+  }
+  .image,
+  .text {
+    max-width: 100%;
+  }
+}
