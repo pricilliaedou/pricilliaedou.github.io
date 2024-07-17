@@ -1,0 +1,160 @@
+:root {
+  /* Colors */
+  --first-color: #ffffff;
+  --second-color: #525252;
+  --third-color: #dfa300;
+  --fourth-color: #050302;
+}
+
+/* Import des polices depuis google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -----------GENERAL--------------- */
+/* -------------------------------- */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px; /* Paragraphe standard */
+  line-height: 1.6;
+  color: var(--second-color);
+  background-color: var(--first-color);
+}
+
+a {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  color: var(--first-color);
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Titres et En-Têtes */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  color: var(--second-color);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+p,
+li,
+span,
+a {
+  font-family: "Open Sans", sans-serif;
+  color: var(--first-color);
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ---------------HEADER-------------- */
+/* ---------------------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: var(--fourth-color);
+  padding: 20px;
+  height: 12vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+nav a {
+  padding: 20px;
+  transition: 0.25s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--third-color);
+  /* border-top: 2px solid var(--third-color); */
+  box-shadow: 0 0.5em 0.5em -0.4em var(--third-color);
+  transform: translateY(-0.25em);
+}
+
+#hamburger {
+  display: none;
+}
+#navlink {
+  width: 200px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--fourth-color);
+  color: var(--first-color);
+  opacity: 0.8;
+  position: absolute;
+  right: -200px;
+  padding: 20px;
+  display: none;
+}
+#navlink.open {
+  right: 0 !important;
+  top: 10vh;
+}
+
+#navlink :hover {
+  color: var(--third-color);
+}
+
+/* Responsive */
+@media screen and (max-width: 767px) {
+  /* Header */
+  .container {
+    max-width: 767px;
+  }
+  nav {
+    display: none;
+  }
+  #hamburger {
+    display: flex;
+  }
+  #navlink {
+    display: flex;
+  }
+}
