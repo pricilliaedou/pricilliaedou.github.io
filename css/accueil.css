@@ -1,22 +1,40 @@
 /* main */
 main {
   display: flex;
-  height: auto;
-  align-items: center;
-  margin-top: 12vh;
-  min-height: 80vh;
 }
-.image,
-.text {
-  max-width: 50%;
+
+.image {
+  width: 40%;
+  height: 100%;
+  opacity: 0.5;
+  margin-right: 5%;
 }
 
 .image img {
-  max-width: 100%;
+  max-width: 90%;
 }
 .text {
   padding: 20px;
+  width: 60%;
 }
+
+.typewriter h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  animation: typing 3.5s steps(50);
+  color: var(--third-color);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .links {
   margin-top: 20px;
   display: flex;
@@ -37,7 +55,7 @@ main {
   }
 
   main {
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin-top: 20vh;
   }
   .image,

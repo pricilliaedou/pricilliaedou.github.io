@@ -1,6 +1,9 @@
+/* .container {
+  margin: 10vh auto;
+} */
 main {
-  margin: 12vh 0;
-  min-height: 68vh;
+  /* margin: 12vh 0; */
+  /* min-height: 68vh; */
   display: flex;
   flex-direction: column;
   padding: 0 20px;
@@ -143,6 +146,9 @@ main h2 {
 .letter svg {
   fill: var(--third-color);
 }
+.letter a svg :hover {
+  cursor: pointer;
+}
 
 .letter .form-contact {
   text-align: center;
@@ -162,7 +168,7 @@ main h2 {
 }
 
 .animation-contact:hover .letter {
-  transform: translateY(-50px);
+  transform: translateY(-85px);
   transition-delay: 0.5s;
 }
 

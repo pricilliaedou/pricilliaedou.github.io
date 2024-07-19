@@ -1,13 +1,12 @@
 :root {
   /* Colors */
-  --first-color: #ffffff;
-  --second-color: #525252;
-  --third-color: #dfa300;
+  --first-color: #474646;
+  --second-color: #4f402f;
+  --third-color: #f56a0b;
   --fourth-color: #050302;
 }
 
-/* Import des polices depuis google fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
@@ -21,17 +20,17 @@ html {
   font-size: 10px;
 }
 body {
-  font-family: "Open Sans", sans-serif;
   font-size: 1.6rem; /* Paragraphe standard */
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   color: var(--second-color);
-  background-color: var(--first-color);
+  background-color: #f4ca98;
 }
 
 a {
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-  color: var(--first-color);
+  font-family: "Inter", sans-serif;
+  color: #723012;
   font-size: 16px;
 }
 
@@ -46,13 +45,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Playfair Display", serif;
-  color: var(--second-color);
   font-weight: bold;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 42px;
 }
 
 h2 {
@@ -78,14 +75,30 @@ h6 {
 p,
 li,
 span {
-  font-family: "Open Sans", sans-serif;
   color: var(--second-color);
   font-size: 16px;
 }
 
 .container {
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 5vh auto;
+  min-height: 90vh;
+
+  background-image: url("./images/svg-background.svg");
+  background-position: 100%;
+  background-size: cover;
+  padding: 0 20px;
+}
+
+.circle {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: 2;
+  background-image: url("../images//feuille.png");
+  opacity: 0.2;
+  top: 0;
+  left: 0;
 }
 
 /* ---------------HEADER-------------- */
@@ -94,30 +107,31 @@ header {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  background-color: var(--fourth-color);
+
   padding: 20px;
   height: 12vh;
-  position: fixed;
+
   width: 100%;
-  top: 0;
+
+  position: relative;
 }
 
 nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px;
 }
 nav a {
   padding: 20px;
   transition: 0.25s;
+  font-family: "Inter", sans-serif;
 }
 
 nav a:hover,
 nav a:focus {
-  color: var(--third-color);
-  /* border-top: 2px solid var(--third-color); */
-  box-shadow: 0 0.5em 0.5em -0.4em var(--third-color);
+  color: #1d1a17;
+
+  box-shadow: 0 0.5em 0.5em -0.4em #1d1a17;
   transform: translateY(-0.25em);
 }
 
@@ -150,32 +164,33 @@ nav a:focus {
 .social {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 15px 0;
   align-items: center;
   justify-content: space-evenly;
-  background-color: var(--fourth-color);
-  gap: 10px;
-  fill: var(--first-color);
-  height: 50vh;
-  border-radius: 10px;
+  height: 20vh;
+  border-radius: 100% 0% 0% 100% / 46% 65% 35% 54%;
   position: fixed;
-  top: 25%;
-  right: 0;
+  top: 40%;
+  right: 5%;
   z-index: 1;
   opacity: 0.7;
 }
-.social :hover {
+.social a {
+  fill: #723012;
+}
+.social a :hover {
   cursor: pointer;
-  fill: var(--third-color);
+  fill: #1d1a17;
 }
 /* Footer */
 footer {
-  background-color: var(--fourth-color);
-  color: var(--first-color);
+  background-color: #3d1708;
   padding: 20px;
-  position: absolute;
-  bottom: 0;
   width: 100%;
+}
+footer p,
+footer a {
+  color: white;
 }
 /* Responsive */
 @media screen and (max-width: 767px) {
